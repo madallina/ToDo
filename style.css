@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(120deg, #d06fd5, #4f3289);
+  color: white;
+  font-family: "Times New Roman", Times, sans-serif;
+  min-height: 100vh;
+}
+header {
+  font-size: 1.5rem;
+}
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+}
+form button {
+  color: #d06fd5;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form button:hover {
+  background-color: #d06fd5;
+  color: white;
+}
+.todo-text {
+  margin: 0 0 0 0.7rem;
+}
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+.todo-item {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  transition: all 0.3s ease;
+  justify-content: space-between;
+  align-items: center;
+
+  & div {
+    display: flex;
+  }
+}
+
+.todo-item li {
+  flex: 1;
+}
+
+.delete-button,
+.check-button {
+  background: #ca50c0;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.check-button {
+  background: rgb(79, 182, 149);
+}
+
+.fa-check,
+.fa-trash {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+.filter-todo {
+  padding: 1rem;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  color: #ca50c0;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: #d06fd5;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: 0.3s all ease;
+}
+.select:hover::after {
+  background: white;
+  color: #d06fd5;
+}
+
+@media (max-width: 768px) {
+  .delete-button,
+  .check-button {
+    padding: 0.5rem;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  header {
+    font-size: 1rem;
+  }
+  form input {
+    font-size: 1.5rem;
+    padding: 0.3rem;
+  }
+  .filter-todo {
+    padding: 0.5rem;
+  }
+  .select {
+    font-size: 0.5rem;
+  }
+  .todo-button {
+    padding: 0.3rem;
+    font-size: 1.5rem;
+  }
+
+  .check-button,
+  .delete-button {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 320px){
+    .todo-list {
+        min-width: 70%;
+    }
+
+    form input {
+    font-size: 1rem;
+ 
+}
+ .todo-button{
+    font-size: 1rem;
+ 
+}
+}
